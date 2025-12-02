@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidencias - Portafolio Redes</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .gallery-hero {
+            padding: 8rem 5rem 4rem;
+            text-align: center;
+        }
+
+        .gallery-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .gallery-section {
+            margin-bottom: 4rem;
+        }
+
+        .gallery-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(0, 194, 255, 0.1);
+            border-left: 4px solid var(--secondary);
+            border-radius: 10px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            aspect-ratio: 4/3;
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(0, 194, 255, 0.2);
+            transition: all 0.4s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--secondary);
+            z-index: 10;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.2);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+            padding: 1.5rem;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-title {
+            color: var(--white);
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .gallery-description {
+            color: var(--secondary);
+            font-size: 0.85rem;
+        }
+
+        /* Modal para ver imagen en grande */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 15px;
+            box-shadow: var(--shadow-hover);
+            animation: zoomIn 0.3s ease;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 3rem;
+            color: var(--white);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .close-modal:hover {
+            color: var(--secondary);
+            transform: rotate(90deg);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.5); }
+            to { transform: scale(1); }
+        }
+
+        .team-photos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-photo-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(0, 194, 255, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .team-photo-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--secondary);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .team-photo-placeholder {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: var(--gradient);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-bg"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="pdfyimagenes/logo.png" alt="Logo">
+                <span>PORTAFOLIO REDES</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="materiales.html">Materiales</a></li>
+                <li><a href="evidencias.html" class="active">Evidencias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="acerca.html">Acerca</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="gallery-hero">
+        <h1 class="glitch" data-text="EVIDENCIAS">EVIDENCIAS</h1>
+        <p class="subtitle">Galería fotográfica de nuestras prácticas y laboratorios</p>
+    </section>
+
+    <div class="gallery-container">
+        <!-- FOTOS DE LABORATORIOS -->
+        <div class="gallery-section">
+            <div class="gallery-header">
+                <span class="section-icon">🔬</span>
+                <h2 class="section-title">Prácticas de Laboratorio</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="pdfyimagenes/cables5e.jpg" alt="Cables Cat5e">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Cables Cat5e</div>
+                        <div class="gallery-description">Práctica de cableado estructurado</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="pdfyimagenes/creaciónecablesetnered5e.jpg" alt="Creación de cables">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Creación de Cables de Red</div>
+                        <div class="gallery-description">Armado y certificación Cat5e</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="pdfyimagenes/configurarrouter.jpg" alt="Configuración Router">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Configuración de Router</div>
+                        <div class="gallery-description">Setup y configuración básica</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="pdfyimagenes/imagendelabdeconfigurartouer.jpg" alt="Lab Router">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Laboratorio de Routers</div>
+                        <div class="gallery-description">Práctica de configuración avanzada</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="pdfyimagenes/portadadevideo.jpg" alt="Video Proyecto">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Proyecto en Video</div>
+                        <div class="gallery-description">Demostración del proyecto final</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="pdfyimagenes/proyecto.jpg" alt="Proyecto">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Proyecto Final</div>
+                        <div class="gallery-description">Servidor FTP implementado</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EVIDENCIAS DE PARCIALES -->
+        <div class="gallery-section">
+            <div class="gallery-header">
+                <span class="section-icon">📝</span>
+                <h2 class="section-title">Evaluaciones y Parciales</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="pdfyimagenes/parcialmagdalenagonzalez.jpg" alt="Parcial Magdalena">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Parcial 1 - Magdalena</div>
+                        <div class="gallery-description">Evaluación teórico-práctica</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="pdfyimagenes/parcial1magdalenagonzaleznota.jpg" alt="Nota Parcial 1">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Nota Parcial 1</div>
+                        <div class="gallery-description">Calificación: 98/100</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="pdfyimagenes/parcial1adrian.jpg" alt="Parcial 1 Adrian">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Parcial 1 - Adrian</div>
+                        <div class="gallery-description">Evaluación primer parcial</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="pdfyimagenes/parcial1irvin.jpg" alt="Parcial 1 Irvin">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Parcial 1 - Irving</div>
+                        <div class="gallery-description">Primera evaluación</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="pdfyimagenes/parcial2adrian.jpg" alt="Parcial 2 Adrian">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Parcial 2 - Adrian</div>
+                        <div class="gallery-description">Packet Tracer práctico</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="pdfyimagenes/parcial2irvin.jpg" alt="Parcial 2 Irvin">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Parcial 2 - Irving</div>
+                        <div class="gallery-description">Evaluación Packet Tracer</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="pdfyimagenes/parcial3irvin.jpg" alt="Parcial 3 Irvin">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Parcial 3 - Irving</div>
+                        <div class="gallery-description">Modelos y Protocolo IP</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="pdfyimagenes/parcial3magdalenagonzalez.jpg.png" alt="Parcial 3 Magdalena">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Parcial 3 - Magdalena</div>
+                        <div class="gallery-description">Tercer parcial</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EQUIPO -->
+        <div class="gallery-section">
+            <div class="gallery-header">
+                <span class="section-icon">👥</span>
+                <h2 class="section-title">Nuestro Equipo</h2>
+            </div>
+            <div class="team-photos">
+                <div class="team-photo-card">
+                    <div class="team-photo-placeholder">MG</div>
+                    <h3 class="gallery-title">Magdalena González</h3>
+                    <p class="gallery-description">4-819-1590</p>
+                </div>
+                <div class="team-photo-card">
+                    <div class="team-photo-placeholder">IM</div>
+                    <h3 class="gallery-title">Irving Martínez</h3>
+                    <p class="gallery-description">4-834-1736</p>
+                </div>
+                <div class="team-photo-card">
+                    <div class="team-photo-placeholder">JH</div>
+                    <h3 class="gallery-title">Justin He</h3>
+                    <p class="gallery-description">8-1045-2230</p>
+                </div>
+                <div class="team-photo-card">
+                    <div class="team-photo-placeholder">AJ</div>
+                    <h3 class="gallery-title">Adrian Jiménez</h3>
+                    <p class="gallery-description">4-839-2413</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para ver imágenes en grande -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Portafolio Redes - Universidad Tecnológica de Panamá</p>
+            <p>Dra. Y. Castillo - Segundo Semestre 2025</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        function openModal(element) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const img = element.querySelector('img');
+            
+            modal.classList.add('active');
+            modalImg.src = img.src;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>
+
+ 

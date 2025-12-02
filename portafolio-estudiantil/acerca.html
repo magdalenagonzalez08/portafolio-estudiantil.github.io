@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca del Sitio - Portafolio Redes</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .about-hero {
+            padding: 8rem 5rem 4rem;
+            text-align: center;
+        }
+
+        .about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .about-section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(0, 194, 255, 0.2);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            transition: all 0.4s ease;
+        }
+
+        .about-section:hover {
+            border-color: var(--secondary);
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-5px);
+        }
+
+        .section-title-about {
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-icon-large {
+            font-size: 2.5rem;
+        }
+
+        .about-text {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .tech-card {
+            background: rgba(0, 102, 255, 0.1);
+            border: 1px solid rgba(0, 194, 255, 0.3);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .tech-card:hover {
+            background: rgba(0, 194, 255, 0.2);
+            transform: scale(1.1);
+            border-color: var(--secondary);
+        }
+
+        .tech-icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tech-name {
+            color: var(--white);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .purpose-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .purpose-item {
+            background: rgba(0, 194, 255, 0.05);
+            border-left: 4px solid var(--secondary);
+            padding: 1rem 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .purpose-item:hover {
+            background: rgba(0, 194, 255, 0.15);
+            transform: translateX(10px);
+        }
+
+        .purpose-item::before {
+            content: '✓';
+            color: var(--secondary);
+            font-weight: 700;
+            margin-right: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .credits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .credit-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            border: 1px solid rgba(0, 194, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .credit-item:hover {
+            background: rgba(0, 194, 255, 0.1);
+            border-color: var(--secondary);
+        }
+
+        .credit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .credit-name {
+            color: var(--white);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.2) 0%, rgba(0, 194, 255, 0.2) 100%);
+            border: 2px solid var(--secondary);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .highlight-text {
+            font-size: 1.3rem;
+            color: var(--white);
+            font-weight: 600;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-bg"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="pdfyimagenes/logo.png" alt="Logo">
+                <span>PORTAFOLIO REDES</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="materiales.html">Materiales</a></li>
+                <li><a href="evidencias.html">Evidencias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="acerca.html" class="active">Acerca</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="about-hero">
+        <h1 class="glitch" data-text="ACERCA DEL SITIO">ACERCA DEL SITIO</h1>
+        <p class="subtitle">Información sobre este portafolio estudiantil</p>
+    </section>
+
+    <div class="about-container">
+        <!-- Propósito del Portafolio -->
+        <div class="about-section">
+            <h2 class="section-title-about">
+                <span class="section-icon-large">🎯</span>
+                Propósito del Portafolio
+            </h2>
+            <p class="about-text">
+                Este portafolio digital documenta nuestro aprendizaje y desarrollo en el curso de 
+                Redes de Computadoras y Ciberseguridad durante el segundo semestre de 2025. 
+                Recopila evidencias de nuestras prácticas, proyectos y evaluaciones, mostrando 
+                el progreso técnico alcanzado por nuestro equipo.
+            </p>
+            
+            <ul class="purpose-list">
+                <li class="purpose-item">Documentar todas las actividades del curso de manera organizada</li>
+                <li class="purpose-item">Presentar evidencias visuales de laboratorios y prácticas</li>
+                <li class="purpose-item">Facilitar el acceso a materiales y recursos del curso</li>
+                <li class="purpose-item">Demostrar competencias adquiridas en redes y seguridad</li>
+                <li class="purpose-item">Servir como referencia para futuras consultas académicas</li>
+            </ul>
+        </div>
+
+        <!-- Destacado -->
+        <div class="highlight-box">
+            <p class="highlight-text">
+                💡 Este sitio representa el trabajo colaborativo de 4 estudiantes comprometidos 
+                con la excelencia académica en el campo de las redes de computadoras.
+            </p>
+        </div>
+
+        <!-- Tecnologías Utilizadas -->
+        <div class="about-section">
+            <h2 class="section-title-about">
+                <span class="section-icon-large">💻</span>
+                Tecnologías Utilizadas
+            </h2>
+            <p class="about-text">
+                Este portafolio fue desarrollado utilizando tecnologías web modernas para 
+                garantizar una experiencia visual atractiva, navegación fluida y diseño responsive.
+            </p>
+            
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">📄</div>
+                    <div class="tech-name">HTML5</div>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🎨</div>
+                    <div class="tech-name">CSS3</div>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">⚡</div>
+                    <div class="tech-name">JavaScript</div>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🌐</div>
+                    <div class="tech-name">GitHub Pages</div>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">🔤</div>
+                    <div class="tech-name">Google Fonts (Poppins)</div>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">📱</div>
+                    <div class="tech-name">Diseño Responsive</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Características del Sitio -->
+        <div class="about-section">
+            <h2 class="section-title-about">
+                <span class="section-icon-large">✨</span>
+                Características del Sitio
+            </h2>
+            <p class="about-text">
+                El diseño minimalista con paleta de colores azul proporciona una experiencia 
+                profesional y moderna. Implementamos las siguientes características:
+            </p>
+            
+            <ul class="purpose-list">
+                <li class="purpose-item">Diseño minimalista y moderno con efectos visuales atractivos</li>
+                <li class="purpose-item">Animaciones suaves en scroll y hover para mejor interactividad</li>
+                <li class="purpose-item">Fondo animado con efecto parallax y gradientes dinámicos</li>
+                <li class="purpose-item">Navegación intuitiva con menú responsive para móviles</li>
+                <li class="purpose-item">Galería interactiva con visualización en modal</li>
+                <li class="purpose-item">Tarjetas con efectos de hover y transiciones elegantes</li>
+                <li class="purpose-item">Tipografía Poppins para legibilidad óptima</li>
+                <li class="purpose-item">Organización por tipo de evaluación (Labs, Parciales, Proyectos)</li>
+            </ul>
+        </div>
+
+        <!-- Créditos -->
+        <div class="about-section">
+            <h2 class="section-title-about">
+                <span class="section-icon-large">👥</span>
+                Créditos
+            </h2>
+            <p class="about-text">
+                Este portafolio fue desarrollado por:
+            </p>
+            
+            <div class="credits-grid">
+                <div class="credit-item">
+                    <div class="credit-icon">MG</div>
+                    <div class="credit-name">Magdalena González</div>
+                    <p class="about-text" style="font-size: 0.9rem; margin-top: 0.5rem;">4-819-1590</p>
+                </div>
+                <div class="credit-item">
+                    <div class="credit-icon">IM</div>
+                    <div class="credit-name">Irving Martínez</div>
+                    <p class="about-text" style="font-size: 0.9rem; margin-top: 0.5rem;">4-834-1736</p>
+                </div>
+                <div class="credit-item">
+                    <div class="credit-icon">JH</div>
+                    <div class="credit-name">Justin He</div>
+                    <p class="about-text" style="font-size: 0.9rem; margin-top: 0.5rem;">8-1045-2230</p>
+                </div>
+                <div class="credit-item">
+                    <div class="credit-icon">AJ</div>
+                    <div class="credit-name">Adrian Jiménez</div>
+                    <p class="about-text" style="font-size: 0.9rem; margin-top: 0.5rem;">4-839-2413</p>
+                </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 2rem;">
+                <p class="highlight-text">
+                    👩‍🏫 Bajo la guía de: <strong>Dra. Y. Castillo</strong><br>
+                    🏛️ Universidad Tecnológica de Panamá<br>
+                    📅 Segundo Semestre 2025
+                </p>
+            </div>
+        </div>
+
+        <!-- Información Adicional -->
+        <div class="about-section">
+            <h2 class="section-title-about">
+                <span class="section-icon-large">📋</span>
+                Estructura del Contenido
+            </h2>
+            <p class="about-text">
+                El portafolio está organizado según los parámetros de evaluación del curso:
+            </p>
+            
+            <ul class="purpose-list">
+                <li class="purpose-item"><strong>Laboratorios (20%):</strong> 9 prácticas de laboratorio documentadas</li>
+                <li class="purpose-item"><strong>Parciales (30%):</strong> 3 evaluaciones teórico-prácticas</li>
+                <li class="purpose-item"><strong>Proyectos (15%):</strong> Proyecto final de implementación de red</li>
+                <li class="purpose-item"><strong>Materiales:</strong> PDFs, presentaciones y recursos del curso</li>
+                <li class="purpose-item"><strong>Evidencias:</strong> Galería fotográfica de todas las actividades</li>
+            </ul>
+        </div>
+
+        <!-- Agradecimientos -->
+        <div class="about-section">
+            <h2 class="section-title-about">
+                <span class="section-icon-large">🙏</span>
+                Agradecimientos
+            </h2>
+            <p class="about-text">
+                Agradecemos a la <strong>Dra. Y. Castillo</strong> por su dedicación y enseñanza 
+                durante este semestre. Su guía fue fundamental para nuestro desarrollo académico 
+                en el campo de las redes de computadoras y la ciberseguridad.
+            </p>
+            <p class="about-text">
+                También agradecemos a la <strong>Universidad Tecnológica de Panamá</strong> por 
+                proporcionarnos los recursos y el ambiente académico necesario para nuestro aprendizaje.
+            </p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Portafolio Redes - Universidad Tecnológica de Panamá</p>
+            <p>Dra. Y. Castillo - Segundo Semestre 2025</p>
+            <p style="margin-top: 1rem; color: rgba(255, 255, 255, 0.5); font-size: 0.9rem;">
+                Desarrollado con ❤️ por el equipo de Redes - Grupo de Laboratorio
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

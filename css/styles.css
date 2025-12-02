@@ -109,8 +109,9 @@ body {
 }
 
 .logo img {
-    height: 50px;
+    height: 35px;
     width: auto;
+    max-width: 120px;
     filter: drop-shadow(0 0 10px rgba(0, 102, 255, 0.5));
 }
 
@@ -497,3 +498,4 @@ body {
         font-size: 2rem;
     }
 }
+

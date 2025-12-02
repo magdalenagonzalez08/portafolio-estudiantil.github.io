@@ -5,166 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividades - Portafolio Redes</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        .activities-hero {
-            padding: 8rem 5rem 4rem;
-            text-align: center;
-        }
-
-        .activities-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .category-section {
-            margin-bottom: 4rem;
-        }
-
-        .category-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background: rgba(0, 102, 255, 0.1);
-            border-left: 4px solid var(--primary);
-            border-radius: 10px;
-        }
-
-        .category-icon {
-            font-size: 2rem;
-        }
-
-        .category-title {
-            font-size: 2rem;
-            color: var(--white);
-        }
-
-        .category-weight {
-            margin-left: auto;
-            font-size: 1.5rem;
-            color: var(--secondary);
-            font-weight: 700;
-        }
-
-        .activity-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .activity-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(0, 102, 255, 0.2);
-            border-radius: 15px;
-            overflow: hidden;
-            transition: all 0.4s ease;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .activity-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
-            border-color: var(--primary);
-            background: rgba(0, 102, 255, 0.08);
-        }
-
-        .activity-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .activity-card:hover .activity-image {
-            transform: scale(1.1);
-        }
-
-        .activity-content {
-            padding: 1.5rem;
-        }
-
-        .activity-number {
-            display: inline-block;
-            background: var(--gradient);
-            color: var(--white);
-            padding: 0.3rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .activity-title {
-            font-size: 1.3rem;
-            color: var(--white);
-            margin-bottom: 0.5rem;
-        }
-
-        .activity-description {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-
-        .activity-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .grade-badge {
-            background: linear-gradient(135deg, #00FF87 0%, #00D9FF 100%);
-            color: var(--dark);
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-weight: 700;
-            font-size: 0.95rem;
-        }
-
-        .grade-pending {
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-        }
-
-        .view-btn {
-            background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            padding: 0.5rem 1.5rem;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .view-btn:hover {
-            background: var(--primary);
-            color: var(--white);
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="animated-bg"></div>
 
-    <!-- Navegación -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">
-                <img src="pdfyimagenes/logo.png" alt="Logo">
-                <span>PORTAFOLIO REDES</span>
+            <div class="nav-logo">
+                <img src="pdfyimagenes/logo.png" alt="Logo UTP" class="logo-img">
+                <span class="logo-text">Grupo 6</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="actividades.html" class="active">Actividades</a></li>
-                <li><a href="materiales.html">Materiales</a></li>
-                <li><a href="evidencias.html">Evidencias</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="acerca.html">Acerca</a></li>
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="actividades.html" class="nav-link active">Actividades</a></li>
+                <li><a href="materiales.html" class="nav-link">Materiales</a></li>
+                <li><a href="evidencias.html" class="nav-link">Evidencias</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                <li><a href="acerca.html" class="nav-link">Acerca</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -174,221 +34,277 @@
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="activities-hero">
-        <h1 class="glitch" data-text="ACTIVIDADES">ACTIVIDADES</h1>
-        <p class="subtitle">Todas nuestras prácticas y evaluaciones del semestre</p>
-    </section>
+    <div class="page-header">
+        <h1 class="page-title">Actividades del Semestre</h1>
+        <p class="page-subtitle">Laboratorios, Parciales y Proyectos - Segundo Semestre 2025</p>
+    </div>
 
-    <!-- Actividades -->
-    <div class="activities-container">
-        <!-- LABORATORIOS -->
-        <div class="category-section">
-            <div class="category-header">
-                <span class="category-icon">🔬</span>
-                <h2 class="category-title">Laboratorios</h2>
-                <span class="category-weight">20%</span>
-            </div>
-            <div class="activity-grid">
+    <div class="container">
+        <!-- LABORATORIOS (20%) -->
+        <section class="activities-section">
+            <h2 class="section-title">
+                <span class="title-icon">🔬</span>
+                Laboratorios (20%)
+            </h2>
+            <div class="activities-grid">
+                <!-- Lab 1 -->
                 <div class="activity-card" onclick="window.open('pdfyimagenes/lab01-introduccion.pdf')">
                     <img src="pdfyimagenes/lab01-introduccionimagen.jpg" alt="Lab 1" class="activity-image">
                     <div class="activity-content">
                         <span class="activity-number">Lab 01</span>
                         <h3 class="activity-title">Introducción a Redes</h3>
-                        <p class="activity-description">Conceptos fundamentales de redes de computadoras</p>
+                        <p class="activity-description">Investigación sobre problemas de comunicación en redes: interferencia, latencia, atenuación, ruido. Vence: 26 de agosto 2025</p>
                         <div class="activity-footer">
-                            <span class="grade-badge grade-pending">Pendiente</span>
+                            <span class="grade-badge grade-complete">100/100</span>
                             <button class="view-btn">Ver PDF</button>
                         </div>
                     </div>
                 </div>
 
+                <!-- Lab 2 -->
                 <div class="activity-card" onclick="window.open('pdfyimagenes/lab02-fundamentos.pdf')">
                     <img src="pdfyimagenes/lab02-fundamentosimagen.jpg" alt="Lab 2" class="activity-image">
                     <div class="activity-content">
                         <span class="activity-number">Lab 02</span>
-                        <h3 class="activity-title">Fundamentos de Networking</h3>
-                        <p class="activity-description">Fundamentos y configuración básica</p>
+                        <h3 class="activity-title">Cableado Estructurado</h3>
+                        <p class="activity-description">Armado de cable Cat5e en el laboratorio. Pruebas de cable cruzado y no cruzado. Vence: 30 de agosto 2025</p>
                         <div class="activity-footer">
-                            <span class="grade-badge">100/100</span>
+                            <span class="grade-badge grade-complete">100/100</span>
                             <button class="view-btn">Ver PDF</button>
                         </div>
                     </div>
                 </div>
 
+                <!-- Lab 3 -->
                 <div class="activity-card" onclick="window.open('pdfyimagenes/lab03-configuracion.pdf')">
                     <img src="pdfyimagenes/lab03-configuracionimagen.jpg" alt="Lab 3" class="activity-image">
                     <div class="activity-content">
                         <span class="activity-number">Lab 03</span>
-                        <h3 class="activity-title">Configuración de Dispositivos</h3>
-                        <p class="activity-description">Configuración de routers y switches</p>
+                        <h3 class="activity-title">Equipos de Interconexión</h3>
+                        <p class="activity-description">Investigación sobre equipos de red: Switch, Router, Gateway, Access Point, Firewall y protectores. Vence: 2 de septiembre 2025</p>
                         <div class="activity-footer">
-                            <span class="grade-badge">90/100</span>
+                            <span class="grade-badge grade-good">90/100</span>
                             <button class="view-btn">Ver PDF</button>
                         </div>
                     </div>
                 </div>
 
+                <!-- Lab 4 -->
                 <div class="activity-card" onclick="window.open('pdfyimagenes/lab04-practica.pdf')">
                     <img src="pdfyimagenes/lab04-practicaimagen.jpg" alt="Lab 4" class="activity-image">
                     <div class="activity-content">
                         <span class="activity-number">Lab 04</span>
-                        <h3 class="activity-title">Práctica de Redes</h3>
-                        <p class="activity-description">Implementación práctica de conceptos</p>
+                        <h3 class="activity-title">Red Simple en Packet Tracer</h3>
+                        <p class="activity-description">Creación de red simple siguiendo instrucciones paso a paso en Cisco Packet Tracer. Vence: 15 de septiembre 2025</p>
                         <div class="activity-footer">
-                            <span class="grade-badge">100/100</span>
+                            <span class="grade-badge grade-complete">100/100</span>
                             <button class="view-btn">Ver PDF</button>
                         </div>
                     </div>
                 </div>
 
+                <!-- Lab 5 -->
                 <div class="activity-card" onclick="window.open('pdfyimagenes/lab05-uso-vpn.pdf')">
                     <img src="pdfyimagenes/lab05-uso-vpnimagen.jpg" alt="Lab 5" class="activity-image">
                     <div class="activity-content">
                         <span class="activity-number">Lab 05</span>
                         <h3 class="activity-title">Uso de VPN</h3>
-                        <p class="activity-description">Configuración y uso de VPN</p>
+                        <p class="activity-description">Análisis y configuración de VPN para protección de redes. Creación de escenario de prueba. Vence: 24 de septiembre 2025</p>
                         <div class="activity-footer">
-                            <span class="grade-badge">95/100</span>
+                            <span class="grade-badge grade-good">95/100</span>
                             <button class="view-btn">Ver PDF</button>
                         </div>
                     </div>
                 </div>
 
+                <!-- Lab 6 -->
                 <div class="activity-card" onclick="window.open('pdfyimagenes/lab06-creacion-red.pdf')">
                     <img src="pdfyimagenes/lab06-creacion-redimagen.jpg" alt="Lab 6" class="activity-image">
                     <div class="activity-content">
                         <span class="activity-number">Lab 06</span>
                         <h3 class="activity-title">Creación de Red</h3>
-                        <p class="activity-description">Diseño e implementación de red completa</p>
+                        <p class="activity-description">Desarrollo de red en Packet Tracer siguiendo archivo de instrucciones paso a paso. Vence: 7 de octubre 2025</p>
                         <div class="activity-footer">
-                            <span class="grade-badge">100/100</span>
+                            <span class="grade-badge grade-complete">100/100</span>
                             <button class="view-btn">Ver PDF</button>
                         </div>
                     </div>
                 </div>
 
+                <!-- Lab 7 -->
                 <div class="activity-card" onclick="window.open('pdfyimagenes/lab07-clase.pdf')">
                     <img src="pdfyimagenes/lab07-claseimagen.jpg" alt="Lab 7" class="activity-image">
                     <div class="activity-content">
                         <span class="activity-number">Lab 07</span>
-                        <h3 class="activity-title">Laboratorio en Clase</h3>
-                        <p class="activity-description">Práctica realizada en clase</p>
+                        <h3 class="activity-title">Presentación en Clase</h3>
+                        <p class="activity-description">Síntesis y presentación de tema asignado al grupo. Trabajo colaborativo en clase. Vence: 14 de octubre 2025</p>
                         <div class="activity-footer">
-                            <span class="grade-badge">100/100</span>
+                            <span class="grade-badge grade-complete">100/100</span>
                             <button class="view-btn">Ver PDF</button>
                         </div>
                     </div>
                 </div>
 
+                <!-- Lab 8 -->
                 <div class="activity-card" onclick="window.open('pdfyimagenes/lab08-creacion-vpn.pdf')">
                     <img src="pdfyimagenes/lab08-creacion-vpnimagen.jpg" alt="Lab 8" class="activity-image">
                     <div class="activity-content">
                         <span class="activity-number">Lab 08</span>
-                        <h3 class="activity-title">Creación de VPN</h3>
-                        <p class="activity-description">Implementación completa de VPN</p>
+                        <h3 class="activity-title">Creación de VLANs</h3>
+                        <p class="activity-description">Diseño de red doméstica con VLANs: Red invitado, Virtual1 y Virtual2. Documentación completa. Vence: 22 de octubre 2025</p>
                         <div class="activity-footer">
-                            <span class="grade-badge">100/100</span>
+                            <span class="grade-badge grade-complete">100/100</span>
                             <button class="view-btn">Ver PDF</button>
                         </div>
                     </div>
                 </div>
 
+                <!-- Lab 9 -->
                 <div class="activity-card" onclick="window.open('pdfyimagenes/lab09-red-simple.pdf')">
                     <img src="pdfyimagenes/lab09-red-simpleimagen.jpg" alt="Lab 9" class="activity-image">
                     <div class="activity-content">
                         <span class="activity-number">Lab 09</span>
-                        <h3 class="activity-title">Diseño de Red Simple</h3>
-                        <p class="activity-description">Creación y diseño de red simple</p>
+                        <h3 class="activity-title">Red Alámbrica e Inalámbrica</h3>
+                        <p class="activity-description">Diseño completo de red mixta: alámbrica e inalámbrica. Configuración de router y pruebas de conectividad. Vence: 31 de octubre 2025</p>
                         <div class="activity-footer">
-                            <span class="grade-badge">100/100</span>
+                            <span class="grade-badge grade-complete">100/100</span>
                             <button class="view-btn">Ver PDF</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- PARCIALES -->
-        <div class="category-section">
-            <div class="category-header">
-                <span class="category-icon">📝</span>
-                <h2 class="category-title">Parciales</h2>
-                <span class="category-weight">30%</span>
-            </div>
-            <div class="activity-grid">
+        <!-- PARCIALES (30%) -->
+        <section class="activities-section">
+            <h2 class="section-title">
+                <span class="title-icon">📝</span>
+                Parciales (30%)
+            </h2>
+            <div class="activities-grid">
+                <!-- Parcial 1 -->
                 <div class="activity-card">
-                    <img src="pdfyimagenes/parcialmagdalenagonzalez.jpg" alt="Parcial 1" class="activity-image">
+                    <img src="pdfyimagenes/parcial1magdalenagonzaleznota.jpg" alt="Parcial 1" class="activity-image">
                     <div class="activity-content">
                         <span class="activity-number">Parcial 01</span>
-                        <h3 class="activity-title">Primer Parcial</h3>
-                        <p class="activity-description">Evaluación teórico-práctica</p>
+                        <h3 class="activity-title">Evaluación Teórico-Práctica</h3>
+                        <p class="activity-description">Primer examen parcial del curso. Evaluación de conceptos fundamentales de redes. Fecha: 17 de septiembre 2025</p>
                         <div class="activity-footer">
-                            <span class="grade-badge">98/100</span>
-                            <button class="view-btn" onclick="alert('Ver evidencias en galería')">Ver Más</button>
+                            <span class="grade-badge grade-excellent">98/100</span>
+                            <button class="view-btn">Ver Evidencia</button>
                         </div>
                     </div>
                 </div>
 
+                <!-- Parcial 2 -->
                 <div class="activity-card" onclick="window.open('pdfyimagenes/parcial02-packet-tracermagdalenagonzalez.pdf')">
-                    <img src="pdfyimagenes/parcial2magdalenagonzalez.jpg" alt="Parcial 2" class="activity-image">
+                    <img src="pdfyimagenes/parcial2adrian.jpg" alt="Parcial 2" class="activity-image">
                     <div class="activity-content">
                         <span class="activity-number">Parcial 02</span>
-                        <h3 class="activity-title">Práctico Packet Tracer</h3>
-                        <p class="activity-description">Evaluación práctica en Packet Tracer</p>
+                        <h3 class="activity-title">Curso Cisco Packet Tracer</h3>
+                        <p class="activity-description">Completar curso de Introducción a Cisco Packet Tracer en Netacad.com con examen final y encuesta. Fecha: 14 de octubre 2025</p>
                         <div class="activity-footer">
-                            <span class="grade-badge">100/100</span>
+                            <span class="grade-badge grade-complete">100/100</span>
                             <button class="view-btn">Ver PDF</button>
                         </div>
                     </div>
                 </div>
 
+                <!-- Parcial 3 -->
                 <div class="activity-card">
                     <img src="pdfyimagenes/parcial3magdalenagonzalez.jpg.png" alt="Parcial 3" class="activity-image">
                     <div class="activity-content">
                         <span class="activity-number">Parcial 03</span>
                         <h3 class="activity-title">Modelos y Protocolo IP</h3>
-                        <p class="activity-description">Modelos de comunicación y Protocolo IP</p>
+                        <p class="activity-description">Evaluación sobre modelos de comunicación OSI/TCP-IP y protocolo de Internet IP. Fecha: 12 de noviembre 2025</p>
                         <div class="activity-footer">
-                            <span class="grade-badge grade-pending">Enviado</span>
-                            <button class="view-btn" onclick="alert('Ver evidencias en galería')">Ver Más</button>
+                            <span class="grade-badge grade-pending">Completado</span>
+                            <button class="view-btn">Ver Evidencia</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- PROYECTOS -->
-        <div class="category-section">
-            <div class="category-header">
-                <span class="category-icon">🎯</span>
-                <h2 class="category-title">Proyectos</h2>
-                <span class="category-weight">15%</span>
-            </div>
-            <div class="activity-grid">
+        <!-- PROYECTOS (15%) -->
+        <section class="activities-section">
+            <h2 class="section-title">
+                <span class="title-icon">🚀</span>
+                Proyectos (15%)
+            </h2>
+            <div class="activities-grid">
+                <!-- Proyecto 1 -->
                 <div class="activity-card" onclick="window.open('pdfyimagenes/proyectoftp.pdf')">
                     <img src="pdfyimagenes/proyecto.jpg" alt="Proyecto 1" class="activity-image">
                     <div class="activity-content">
                         <span class="activity-number">Proyecto 01</span>
-                        <h3 class="activity-title">Proyecto Final</h3>
-                        <p class="activity-description">Implementación de servidor FTP y configuración de red</p>
+                        <h3 class="activity-title">Servidor TFTP</h3>
+                        <p class="activity-description">Implementación y configuración de servidor TFTP (Trivial File Transfer Protocol). Documentación completa del proceso. Vence: 30 de septiembre 2025</p>
                         <div class="activity-footer">
-                            <span class="grade-badge">90/100</span>
+                            <span class="grade-badge grade-good">90/100</span>
                             <button class="view-btn">Ver PDF</button>
                         </div>
                     </div>
                 </div>
+
+                <!-- Video Final -->
+                <div class="activity-card" onclick="window.open('https://utpac-my.sharepoint.com/personal/magdalena_gonzalez2_utp')">
+                    <img src="pdfyimagenes/portadadevideo.jpg" alt="Video" class="activity-image">
+                    <div class="activity-content">
+                        <span class="activity-number">Video</span>
+                        <h3 class="activity-title">Video sobre Ciberseguridad</h3>
+                        <p class="activity-description">Presentación en video sobre temas de ciberseguridad aplicados al curso. Trabajo colaborativo del grupo. Vence: 19 de noviembre 2025</p>
+                        <div class="activity-footer">
+                            <span class="grade-badge grade-pending">Enviado</span>
+                            <button class="view-btn">Ver Video</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Resumen de Calificaciones -->
+        <section class="summary-section">
+            <h2 class="section-title">Resumen de Evaluaciones</h2>
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <h3>Laboratorios</h3>
+                    <div class="summary-percentage">20%</div>
+                    <p>9 prácticas completadas</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 98%"></div>
+                    </div>
+                    <p class="summary-grade">Promedio: 98/100</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Parciales</h3>
+                    <div class="summary-percentage">30%</div>
+                    <p>3 evaluaciones realizadas</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 99%"></div>
+                    </div>
+                    <p class="summary-grade">Promedio: 99/100</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Proyectos</h3>
+                    <div class="summary-percentage">15%</div>
+                    <p>2 trabajos entregados</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 90%"></div>
+                    </div>
+                    <p class="summary-grade">Promedio: 90/100</p>
+                </div>
+            </div>
+        </section>
     </div>
 
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Portafolio Redes - Universidad Tecnológica de Panamá</p>
+        <div class="footer-content">
+            <p>Universidad Tecnológica de Panamá - Sede Chiriquí</p>
+            <p>Ing. Yarisol A. Castillo Q. - Grupo 6 - Segundo Semestre 2025</p>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
 </body>
 </html>
-

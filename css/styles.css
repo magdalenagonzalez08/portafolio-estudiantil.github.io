@@ -109,9 +109,10 @@ body {
 }
 
 .logo img {
-    height: 35px;
+    height: 30px;
     width: auto;
-    max-width: 120px;
+    max-width: 100px;
+    object-fit: contain;
     filter: drop-shadow(0 0 10px rgba(0, 102, 255, 0.5));
 }
 
@@ -498,4 +499,5 @@ body {
         font-size: 2rem;
     }
 }
+
 

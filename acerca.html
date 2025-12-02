@@ -5,26 +5,201 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acerca - Portafolio Redes</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .about-hero {
+            padding: 8rem 5rem 4rem;
+            text-align: center;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .about-section {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            border: 1px solid rgba(0, 194, 255, 0.2);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .about-text {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .tech-card {
+            background: rgba(0, 102, 255, 0.05);
+            border: 1px solid rgba(0, 194, 255, 0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+            background: rgba(0, 194, 255, 0.1);
+            border-color: var(--secondary);
+        }
+
+        .tech-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-card h3 {
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .tech-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        .features-list {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: rgba(0, 194, 255, 0.05);
+            border-left: 4px solid var(--secondary);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateX(10px);
+            background: rgba(0, 194, 255, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .feature-content h4 {
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-content p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+        }
+
+        .credits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .credit-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: rgba(0, 102, 255, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(0, 194, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .credit-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary);
+        }
+
+        .credit-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .credit-item h4 {
+            color: var(--white);
+            margin-bottom: 0.3rem;
+        }
+
+        .credit-item p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+        }
+
+        .version-info {
+            background: rgba(0, 102, 255, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .version-info p {
+            color: rgba(255, 255, 255, 0.8);
+            margin: 0.5rem 0;
+            font-size: 1rem;
+        }
+
+        .version-info a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        .version-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <div class="animated-bg"></div>
 
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <img src="pdfyimagenes/logo.png" alt="Logo UTP" class="logo-img">
-                <span class="logo-text">Grupo 6</span>
+            <div class="logo">
+                <img src="pdfyimagenes/logo.png" alt="Logo UTP">
+                <span>Grupo 6</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Inicio</a></li>
-                <li><a href="actividades.html" class="nav-link">Actividades</a></li>
-                <li><a href="materiales.html" class="nav-link">Materiales</a></li>
-                <li><a href="evidencias.html" class="nav-link">Evidencias</a></li>
-                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
-                <li><a href="acerca.html" class="nav-link active">Acerca</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="materiales.html">Materiales</a></li>
+                <li><a href="evidencias.html">Evidencias</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="acerca.html" class="active">Acerca</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -34,14 +209,14 @@
         </div>
     </nav>
 
-    <div class="page-header">
-        <h1 class="page-title">Sobre Este Portafolio</h1>
-        <p class="page-subtitle">Información del proyecto y tecnologías utilizadas</p>
-    </div>
+    <section class="about-hero">
+        <h1 class="glitch" data-text="ACERCA">ACERCA</h1>
+        <p class="subtitle">Sobre este portafolio y tecnologías utilizadas</p>
+    </section>
 
-    <div class="container">
+    <div class="about-container">
         <!-- Propósito -->
-        <section class="about-section">
+        <div class="about-section">
             <h2 class="section-title">Propósito del Portafolio</h2>
             <p class="about-text">
                 Este portafolio digital documenta el trabajo del <strong>Grupo 6 de laboratorio</strong> en el 
@@ -56,47 +231,10 @@
                 parciales 30%, proyectos 15%), materiales de apoyo, evidencias fotográficas y documentación 
                 completa de cada trabajo realizado.
             </p>
-        </section>
-
-        <!-- Estructura -->
-        <section class="about-section">
-            <h2 class="section-title">Estructura del Sitio</h2>
-            <div class="structure-grid">
-                <div class="structure-card">
-                    <div class="structure-icon">🏠</div>
-                    <h3>Inicio</h3>
-                    <p>Presentación del equipo y resumen del portafolio</p>
-                </div>
-                <div class="structure-card">
-                    <div class="structure-icon">📋</div>
-                    <h3>Actividades</h3>
-                    <p>9 laboratorios, 3 parciales y 2 proyectos organizados por categoría</p>
-                </div>
-                <div class="structure-card">
-                    <div class="structure-icon">📚</div>
-                    <h3>Materiales</h3>
-                    <p>PDFs, presentaciones y recursos del curso</p>
-                </div>
-                <div class="structure-card">
-                    <div class="structure-icon">📸</div>
-                    <h3>Evidencias</h3>
-                    <p>Galería fotográfica de prácticas y trabajos</p>
-                </div>
-                <div class="structure-card">
-                    <div class="structure-icon">📞</div>
-                    <h3>Contacto</h3>
-                    <p>Información del grupo y detalles del curso</p>
-                </div>
-                <div class="structure-card">
-                    <div class="structure-icon">ℹ️</div>
-                    <h3>Acerca</h3>
-                    <p>Sobre el sitio y tecnologías utilizadas</p>
-                </div>
-            </div>
-        </section>
+        </div>
 
         <!-- Tecnologías -->
-        <section class="about-section">
+        <div class="about-section">
             <h2 class="section-title">Tecnologías Utilizadas</h2>
             <div class="tech-grid">
                 <div class="tech-card">
@@ -130,10 +268,10 @@
                     <p>Hosting y despliegue del sitio</p>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Características -->
-        <section class="about-section">
+        <div class="about-section">
             <h2 class="section-title">Características del Diseño</h2>
             <div class="features-list">
                 <div class="feature-item">
@@ -179,49 +317,51 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Créditos -->
-        <section class="about-section">
+        <div class="about-section">
             <h2 class="section-title">Créditos</h2>
-            <div class="credits-content">
-                <h3>Desarrollo del Sitio Web</h3>
-                <div class="credits-grid">
-                    <div class="credit-item">
-                        <div class="credit-avatar">MG</div>
-                        <div>
-                            <h4>Magdalena González</h4>
-                            <p>4-819-1590 • +507 6259-1814</p>
-                            <a href="https://www.linkedin.com/in/magdalenagonzalezpanama/" target="_blank" class="linkedin-link">LinkedIn</a>
-                        </div>
+            <p class="about-text"><strong>Desarrollo del Sitio Web - Grupo 6</strong></p>
+            <div class="credits-grid">
+                <div class="credit-item">
+                    <div class="credit-avatar">MG</div>
+                    <div>
+                        <h4>Magdalena González</h4>
+                        <p>4-819-1590</p>
+                        <p>📱 +507 6259-1814</p>
+                        <a href="https://www.linkedin.com/in/magdalenagonzalezpanama/" target="_blank" style="color: var(--secondary); font-size: 0.85rem;">🔗 LinkedIn</a>
                     </div>
-                    <div class="credit-item">
-                        <div class="credit-avatar">IM</div>
-                        <div>
-                            <h4>Irving Martínez</h4>
-                            <p>4-834-1736 • +507 6304-9587</p>
-                        </div>
+                </div>
+                <div class="credit-item">
+                    <div class="credit-avatar">IM</div>
+                    <div>
+                        <h4>Irving Martínez</h4>
+                        <p>4-834-1736</p>
+                        <p>📱 +507 6304-9587</p>
                     </div>
-                    <div class="credit-item">
-                        <div class="credit-avatar">JH</div>
-                        <div>
-                            <h4>Justin He</h4>
-                            <p>8-1045-2230 • +507 6251-4400</p>
-                        </div>
+                </div>
+                <div class="credit-item">
+                    <div class="credit-avatar">JH</div>
+                    <div>
+                        <h4>Justin He</h4>
+                        <p>8-1045-2230</p>
+                        <p>📱 +507 6251-4400</p>
                     </div>
-                    <div class="credit-item">
-                        <div class="credit-avatar">AJ</div>
-                        <div>
-                            <h4>Adrian Jiménez</h4>
-                            <p>4-839-2413 • +507 6814-0087</p>
-                        </div>
+                </div>
+                <div class="credit-item">
+                    <div class="credit-avatar">AJ</div>
+                    <div>
+                        <h4>Adrian Jiménez</h4>
+                        <p>4-839-2413</p>
+                        <p>📱 +507 6814-0087</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Agradecimientos -->
-        <section class="about-section">
+        <div class="about-section">
             <h2 class="section-title">Agradecimientos</h2>
             <p class="about-text">
                 Agradecemos a la <strong>Ing. Yarisol A. Castillo Q.</strong> por su dedicación 
@@ -233,22 +373,23 @@
                 por proporcionarnos los recursos y el ambiente académico necesario para nuestro aprendizaje 
                 en la Licenciatura en Ciberseguridad.
             </p>
-        </section>
+        </div>
 
         <!-- Versión -->
-        <section class="about-section">
+        <div class="about-section">
             <h2 class="section-title">Información de Versión</h2>
             <div class="version-info">
                 <p><strong>Versión:</strong> 1.0.0</p>
                 <p><strong>Última actualización:</strong> Diciembre 2025</p>
-                <p><strong>Repositorio:</strong> <a href="https://github.com/magdalenagonzalez08/portafolio-estudiantil.github.io" target="_blank" class="link">GitHub</a></p>
+                <p><strong>Grupo:</strong> Grupo 6 - Laboratorio de Redes</p>
+                <p><strong>Repositorio:</strong> <a href="https://github.com/magdalenagonzalez08/portafolio-estudiantil.github.io" target="_blank">GitHub</a></p>
             </div>
-        </section>
+        </div>
     </div>
 
     <footer class="footer">
-        <div class="footer-content">
-            <p>Universidad Tecnológica de Panamá - Sede Chiriquí</p>
+        <div class="container">
+            <p>&copy; 2025 Universidad Tecnológica de Panamá - Sede Chiriquí</p>
             <p>Ing. Yarisol A. Castillo Q. - Grupo 6 - Segundo Semestre 2025</p>
         </div>
     </footer>

@@ -181,6 +181,27 @@
             font-size: 3rem;
             font-weight: 700;
         }
+
+        .doc-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(0, 194, 255, 0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .doc-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--secondary);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .doc-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -238,6 +259,22 @@
                 </div>
 
                 <div class="gallery-item" onclick="openModal(this)">
+                    <img src="pdfyimagenes/poncharcabletrabajolab.jpg" alt="Ponchar cables">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Trabajo en Laboratorio</div>
+                        <div class="gallery-description">Proceso de ponchado de cables</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="pdfyimagenes/materialesdelladeponchabcables.jpg" alt="Materiales">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Materiales de Laboratorio</div>
+                        <div class="gallery-description">Herramientas para ponchar cables</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openModal(this)">
                     <img src="pdfyimagenes/configurarrouter.jpg" alt="Configuración Router">
                     <div class="gallery-overlay">
                         <div class="gallery-title">Configuración de Router</div>
@@ -250,6 +287,14 @@
                     <div class="gallery-overlay">
                         <div class="gallery-title">Laboratorio de Routers</div>
                         <div class="gallery-description">Práctica de configuración avanzada</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="pdfyimagenes/pruebasconrouter.jpg" alt="Pruebas router">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Pruebas con Router</div>
+                        <div class="gallery-description">Verificación de conectividad</div>
                     </div>
                 </div>
 
@@ -278,6 +323,7 @@
                 <h2 class="section-title">Evaluaciones y Parciales</h2>
             </div>
             <div class="gallery-grid">
+                <!-- PARCIAL 1 -->
                 <div class="gallery-item" onclick="openModal(this)">
                     <img src="pdfyimagenes/parcialmagdalenagonzalez.jpg" alt="Parcial Magdalena">
                     <div class="gallery-overlay">
@@ -289,7 +335,7 @@
                 <div class="gallery-item" onclick="openModal(this)">
                     <img src="pdfyimagenes/parcial1magdalenagonzaleznota.jpg" alt="Nota Parcial 1">
                     <div class="gallery-overlay">
-                        <div class="gallery-title">Nota Parcial 1</div>
+                        <div class="gallery-title">Nota Parcial 1 - Magdalena</div>
                         <div class="gallery-description">Calificación: 98/100</div>
                     </div>
                 </div>
@@ -303,13 +349,22 @@
                 </div>
 
                 <div class="gallery-item" onclick="openModal(this)">
-                    <img src="pdfyimagenes/parcial1irvin.jpg" alt="Parcial 1 Irvin">
+                    <img src="pdfyimagenes/parcial1irvin.jpg" alt="Parcial 1 Irving">
                     <div class="gallery-overlay">
                         <div class="gallery-title">Parcial 1 - Irving</div>
                         <div class="gallery-description">Primera evaluación</div>
                     </div>
                 </div>
 
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="pdfyimagenes/parcial1justing.jpg" alt="Parcial 1 Justin">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Parcial 1 - Justin</div>
+                        <div class="gallery-description">Primera evaluación</div>
+                    </div>
+                </div>
+
+                <!-- PARCIAL 2 -->
                 <div class="gallery-item" onclick="openModal(this)">
                     <img src="pdfyimagenes/parcial2adrian.jpg" alt="Parcial 2 Adrian">
                     <div class="gallery-overlay">
@@ -319,7 +374,7 @@
                 </div>
 
                 <div class="gallery-item" onclick="openModal(this)">
-                    <img src="pdfyimagenes/parcial2irvin.jpg" alt="Parcial 2 Irvin">
+                    <img src="pdfyimagenes/parcial2irvin.jpg" alt="Parcial 2 Irving">
                     <div class="gallery-overlay">
                         <div class="gallery-title">Parcial 2 - Irving</div>
                         <div class="gallery-description">Evaluación Packet Tracer</div>
@@ -327,7 +382,16 @@
                 </div>
 
                 <div class="gallery-item" onclick="openModal(this)">
-                    <img src="pdfyimagenes/parcial3irvin.jpg" alt="Parcial 3 Irvin">
+                    <img src="pdfyimagenes/parcial2justing.jpg" alt="Parcial 2 Justin">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Parcial 2 - Justin</div>
+                        <div class="gallery-description">Curso Cisco Packet Tracer</div>
+                    </div>
+                </div>
+
+                <!-- PARCIAL 3 -->
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="pdfyimagenes/parcial3irvin.jpg" alt="Parcial 3 Irving">
                     <div class="gallery-overlay">
                         <div class="gallery-title">Parcial 3 - Irving</div>
                         <div class="gallery-description">Modelos y Protocolo IP</div>
@@ -340,6 +404,29 @@
                         <div class="gallery-title">Parcial 3 - Magdalena</div>
                         <div class="gallery-description">Tercer parcial</div>
                     </div>
+                </div>
+
+                <div class="gallery-item" onclick="openModal(this)">
+                    <img src="pdfyimagenes/parcial3justing.jpg" alt="Parcial 3 Justin">
+                    <div class="gallery-overlay">
+                        <div class="gallery-title">Parcial 3 - Justin</div>
+                        <div class="gallery-description">Modelos y Protocolo IP</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DOCUMENTOS ADICIONALES -->
+        <div class="gallery-section">
+            <div class="gallery-header">
+                <span class="section-icon">📄</span>
+                <h2 class="section-title">Documentos Adicionales</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="doc-item" onclick="window.open('pdfyimagenes/parcial2adrian.docx')">
+                    <div class="doc-icon">📝</div>
+                    <div class="gallery-title">Documento Parcial 2 - Adrian</div>
+                    <div class="gallery-description">Documento Word del segundo parcial</div>
                 </div>
             </div>
         </div>
@@ -356,6 +443,10 @@
                     <h3 class="gallery-title">Magdalena González</h3>
                     <p class="gallery-description">4-819-1590</p>
                     <p class="gallery-description">📱 +507 6259-1814</p>
+                    <a href="https://www.linkedin.com/in/magdalenagonzalezpanama/" target="_blank" 
+                       style="color: var(--secondary); text-decoration: none; display: block; margin-top: 0.5rem;">
+                        🔗 LinkedIn
+                    </a>
                 </div>
                 <div class="team-photo-card">
                     <div class="team-photo-placeholder">IM</div>

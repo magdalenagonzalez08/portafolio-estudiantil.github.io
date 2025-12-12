@@ -146,12 +146,34 @@
             background: var(--primary);
             color: var(--white);
         }
+
+        .evidence-links {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+
+        .evidence-btn {
+            background: rgba(0, 194, 255, 0.2);
+            border: 1px solid var(--secondary);
+            color: var(--secondary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .evidence-btn:hover {
+            background: var(--secondary);
+            color: var(--dark);
+        }
     </style>
 </head>
 <body>
     <div class="animated-bg"></div>
 
-    <!-- Navegación -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
@@ -174,13 +196,11 @@
         </div>
     </nav>
 
-    <!-- Hero -->
     <section class="activities-hero">
         <h1 class="glitch" data-text="ACTIVIDADES">ACTIVIDADES</h1>
         <p class="subtitle">Todas nuestras prácticas y evaluaciones del semestre</p>
     </section>
 
-    <!-- Actividades -->
     <div class="activities-container">
         <!-- LABORATORIOS -->
         <div class="category-section">
@@ -195,7 +215,7 @@
                     <div class="activity-content">
                         <span class="activity-number">Lab 01</span>
                         <h3 class="activity-title">Introducción a Redes</h3>
-                        <p class="activity-description">Investigación sobre problemas de comunicación en redes: interferencia, latencia, atenuación, ruido. Vence: 26 de agosto 2025</p>
+                        <p class="activity-description">Investigación sobre problemas de comunicación en redes: interferencia, latencia, atenuación, ruido. <br><strong>Vence:</strong> 26 de agosto 2025</p>
                         <div class="activity-footer">
                             <span class="grade-badge">100/100</span>
                             <button class="view-btn">Ver PDF</button>
@@ -208,10 +228,15 @@
                     <div class="activity-content">
                         <span class="activity-number">Lab 02</span>
                         <h3 class="activity-title">Cableado Estructurado</h3>
-                        <p class="activity-description">Armado de cable Cat5e en el laboratorio. Pruebas de cable cruzado y no cruzado. Vence: 30 de agosto 2025</p>
+                        <p class="activity-description">Armado de cable Cat5e en el laboratorio. Pruebas de cable cruzado y no cruzado. <br><strong>Vence:</strong> 30 de agosto 2025</p>
                         <div class="activity-footer">
                             <span class="grade-badge">100/100</span>
                             <button class="view-btn">Ver PDF</button>
+                        </div>
+                        <div class="evidence-links">
+                            <button class="evidence-btn" onclick="event.stopPropagation(); window.open('pdfyimagenes/poncharcabletrabajolab.jpg')">📷 Evidencia</button>
+                            <button class="evidence-btn" onclick="event.stopPropagation(); window.open('pdfyimagenes/materialesdelladeponchabcables.jpg')">📷 Materiales</button>
+                            <button class="evidence-btn" onclick="event.stopPropagation(); window.open('pdfyimagenes/pruebasconrouter.jpg')">📷 Pruebas</button>
                         </div>
                     </div>
                 </div>
@@ -221,7 +246,7 @@
                     <div class="activity-content">
                         <span class="activity-number">Lab 03</span>
                         <h3 class="activity-title">Equipos de Interconexión</h3>
-                        <p class="activity-description">Investigación sobre equipos de red: Switch, Router, Gateway, Access Point, Firewall. Vence: 2 de septiembre 2025</p>
+                        <p class="activity-description">Investigación sobre equipos de red: Switch, Router, Gateway, Access Point, Firewall. <br><strong>Vence:</strong> 2 de septiembre 2025</p>
                         <div class="activity-footer">
                             <span class="grade-badge">90/100</span>
                             <button class="view-btn">Ver PDF</button>
@@ -234,7 +259,7 @@
                     <div class="activity-content">
                         <span class="activity-number">Lab 04</span>
                         <h3 class="activity-title">Red Simple en Packet Tracer</h3>
-                        <p class="activity-description">Creación de red simple siguiendo instrucciones paso a paso en Cisco Packet Tracer. Vence: 15 de septiembre 2025</p>
+                        <p class="activity-description">Creación de red simple siguiendo instrucciones paso a paso en Cisco Packet Tracer. <br><strong>Vence:</strong> 15 de septiembre 2025</p>
                         <div class="activity-footer">
                             <span class="grade-badge">100/100</span>
                             <button class="view-btn">Ver PDF</button>
@@ -247,7 +272,7 @@
                     <div class="activity-content">
                         <span class="activity-number">Lab 05</span>
                         <h3 class="activity-title">Uso de VPN</h3>
-                        <p class="activity-description">Análisis y configuración de VPN para protección de redes. Creación de escenario de prueba. Vence: 24 de septiembre 2025</p>
+                        <p class="activity-description">Análisis y configuración de VPN para protección de redes. Creación de escenario de prueba. <br><strong>Vence:</strong> 24 de septiembre 2025</p>
                         <div class="activity-footer">
                             <span class="grade-badge">95/100</span>
                             <button class="view-btn">Ver PDF</button>
@@ -260,7 +285,7 @@
                     <div class="activity-content">
                         <span class="activity-number">Lab 06</span>
                         <h3 class="activity-title">Creación de Red</h3>
-                        <p class="activity-description">Desarrollo de red en Packet Tracer siguiendo archivo de instrucciones paso a paso. Vence: 7 de octubre 2025</p>
+                        <p class="activity-description">Desarrollo de red en Packet Tracer siguiendo archivo de instrucciones paso a paso. <br><strong>Vence:</strong> 7 de octubre 2025</p>
                         <div class="activity-footer">
                             <span class="grade-badge">100/100</span>
                             <button class="view-btn">Ver PDF</button>
@@ -273,7 +298,7 @@
                     <div class="activity-content">
                         <span class="activity-number">Lab 07</span>
                         <h3 class="activity-title">Presentación en Clase</h3>
-                        <p class="activity-description">Síntesis y presentación de tema asignado al grupo. Trabajo colaborativo en clase. Vence: 14 de octubre 2025</p>
+                        <p class="activity-description">Síntesis y presentación de tema asignado al grupo. Trabajo colaborativo en clase. <br><strong>Vence:</strong> 14 de octubre 2025</p>
                         <div class="activity-footer">
                             <span class="grade-badge">100/100</span>
                             <button class="view-btn">Ver PDF</button>
@@ -286,7 +311,7 @@
                     <div class="activity-content">
                         <span class="activity-number">Lab 08</span>
                         <h3 class="activity-title">Creación de VLANs</h3>
-                        <p class="activity-description">Diseño de red doméstica con VLANs: Red invitado, Virtual1 y Virtual2. Documentación completa. Vence: 22 de octubre 2025</p>
+                        <p class="activity-description">Diseño de red doméstica con VLANs: Red invitado, Virtual1 y Virtual2. Documentación completa. <br><strong>Vence:</strong> 22 de octubre 2025</p>
                         <div class="activity-footer">
                             <span class="grade-badge">100/100</span>
                             <button class="view-btn">Ver PDF</button>
@@ -299,7 +324,7 @@
                     <div class="activity-content">
                         <span class="activity-number">Lab 09</span>
                         <h3 class="activity-title">Red Alámbrica e Inalámbrica</h3>
-                        <p class="activity-description">Diseño completo de red mixta: alámbrica e inalámbrica. Configuración de router y pruebas. Vence: 31 de octubre 2025</p>
+                        <p class="activity-description">Diseño completo de red mixta: alámbrica e inalámbrica. Configuración de router y pruebas. <br><strong>Vence:</strong> 31 de octubre 2025</p>
                         <div class="activity-footer">
                             <span class="grade-badge">100/100</span>
                             <button class="view-btn">Ver PDF</button>
@@ -322,10 +347,15 @@
                     <div class="activity-content">
                         <span class="activity-number">Parcial 01</span>
                         <h3 class="activity-title">Evaluación Teórico-Práctica</h3>
-                        <p class="activity-description">Primer examen parcial del curso. Evaluación de conceptos fundamentales de redes. Fecha: 17 de septiembre 2025</p>
+                        <p class="activity-description">Primer examen parcial del curso. Evaluación de conceptos fundamentales de redes. <br><strong>Fecha:</strong> 17 de septiembre 2025</p>
                         <div class="activity-footer">
                             <span class="grade-badge">98/100</span>
-                            <button class="view-btn" onclick="alert('Ver evidencias en galería')">Ver Más</button>
+                        </div>
+                        <div class="evidence-links">
+                            <button class="evidence-btn" onclick="window.open('pdfyimagenes/parcialmagdalenagonzalez.jpg')">📄 Magdalena</button>
+                            <button class="evidence-btn" onclick="window.open('pdfyimagenes/parcial1adrian.jpg')">📄 Adrian</button>
+                            <button class="evidence-btn" onclick="window.open('pdfyimagenes/parcial1irvin.jpg')">📄 Irving</button>
+                            <button class="evidence-btn" onclick="window.open('pdfyimagenes/parcial1justing.jpg')">📄 Justin</button>
                         </div>
                     </div>
                 </div>
@@ -335,10 +365,16 @@
                     <div class="activity-content">
                         <span class="activity-number">Parcial 02</span>
                         <h3 class="activity-title">Curso Cisco Packet Tracer</h3>
-                        <p class="activity-description">Completar curso de Introducción a Cisco Packet Tracer en Netacad.com con examen final. Fecha: 14 de octubre 2025</p>
+                        <p class="activity-description">Completar curso de Introducción a Cisco Packet Tracer en Netacad.com con examen final. <br><strong>Fecha:</strong> 14 de octubre 2025</p>
                         <div class="activity-footer">
                             <span class="grade-badge">100/100</span>
                             <button class="view-btn">Ver PDF</button>
+                        </div>
+                        <div class="evidence-links">
+                            <button class="evidence-btn" onclick="event.stopPropagation(); window.open('pdfyimagenes/parcial2adrian.jpg')">📄 Adrian</button>
+                            <button class="evidence-btn" onclick="event.stopPropagation(); window.open('pdfyimagenes/parcial2irvin.jpg')">📄 Irving</button>
+                            <button class="evidence-btn" onclick="event.stopPropagation(); window.open('pdfyimagenes/parcial2justing.jpg')">📄 Justin</button>
+                            <button class="evidence-btn" onclick="event.stopPropagation(); window.open('pdfyimagenes/parcial2adrian.docx')">📄 Documento</button>
                         </div>
                     </div>
                 </div>
@@ -348,10 +384,14 @@
                     <div class="activity-content">
                         <span class="activity-number">Parcial 03</span>
                         <h3 class="activity-title">Modelos y Protocolo IP</h3>
-                        <p class="activity-description">Evaluación sobre modelos de comunicación OSI/TCP-IP y protocolo de Internet IP. Fecha: 12 de noviembre 2025</p>
+                        <p class="activity-description">Evaluación sobre modelos de comunicación OSI/TCP-IP y protocolo de Internet IP. <br><strong>Fecha:</strong> 12 de noviembre 2025</p>
                         <div class="activity-footer">
                             <span class="grade-badge grade-pending">Completado</span>
-                            <button class="view-btn" onclick="alert('Ver evidencias en galería')">Ver Más</button>
+                        </div>
+                        <div class="evidence-links">
+                            <button class="evidence-btn" onclick="window.open('pdfyimagenes/parcial3magdalenagonzalez.jpg.png')">📄 Magdalena</button>
+                            <button class="evidence-btn" onclick="window.open('pdfyimagenes/parcial3irvin.jpg')">📄 Irving</button>
+                            <button class="evidence-btn" onclick="window.open('pdfyimagenes/parcial3justing.jpg')">📄 Justin</button>
                         </div>
                     </div>
                 </div>
@@ -371,7 +411,7 @@
                     <div class="activity-content">
                         <span class="activity-number">Proyecto 01</span>
                         <h3 class="activity-title">Servidor TFTP</h3>
-                        <p class="activity-description">Implementación y configuración de servidor TFTP (Trivial File Transfer Protocol). Vence: 30 de septiembre 2025</p>
+                        <p class="activity-description">Implementación y configuración de servidor TFTP (Trivial File Transfer Protocol). <br><strong>Vence:</strong> 30 de septiembre 2025</p>
                         <div class="activity-footer">
                             <span class="grade-badge">90/100</span>
                             <button class="view-btn">Ver PDF</button>
@@ -379,15 +419,18 @@
                     </div>
                 </div>
 
-                <div class="activity-card" onclick="window.open('https://utpac-my.sharepoint.com/personal/magdalena_gonzalez2_utp')">
+                <div class="activity-card">
                     <img src="pdfyimagenes/portadadevideo.jpg" alt="Video" class="activity-image">
                     <div class="activity-content">
                         <span class="activity-number">Video</span>
                         <h3 class="activity-title">Video sobre Ciberseguridad</h3>
-                        <p class="activity-description">Presentación en video sobre temas de ciberseguridad aplicados al curso. Vence: 19 de noviembre 2025</p>
+                        <p class="activity-description">Presentación en video sobre temas de ciberseguridad aplicados al curso. <br><strong>Vence:</strong> 19 de noviembre 2025</p>
                         <div class="activity-footer">
                             <span class="grade-badge grade-pending">Enviado</span>
-                            <button class="view-btn">Ver Video</button>
+                        </div>
+                        <div class="evidence-links">
+                            <button class="evidence-btn" onclick="window.open('https://drive.google.com/file/d/1o4ukgadJzfwDjoC8RXQ2_M2GpTnNIl33/view')">🎬 Google Drive</button>
+                            <button class="evidence-btn" onclick="window.open('https://utpac-my.sharepoint.com/personal/magdalena_gonzalez2_utp_ac_pa/_layouts/15/stream.aspx?id=%2Fpersonal%2Fmagdalena_gonzalez2_utp_ac_pa%2FDocuments%2FDatos%20adjuntos%2FGRUPO%206%20%281%29%2Emp4')">🎬 SharePoint</button>
                         </div>
                     </div>
                 </div>
